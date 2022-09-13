@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  font-family: 'Open Sans';
+  margin: 0;
+  box-sizing: border-box
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+.base-card {
+  background-color: #6C6C6C;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.base-input {
+  border-radius: 5px;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  color: #263238;
+  border: none;
+  height: 40px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.base-input::placeholder {
+  color: #9E9E9E;
+  padding-left: 10px;
+}
+
+@media (min-width: 1200px) {
+  .base-input {
+    height: 50px;
+  }
+}

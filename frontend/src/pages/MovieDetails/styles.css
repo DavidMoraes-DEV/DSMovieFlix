@@ -1,0 +1,76 @@
+.movie-details-container {
+  width: 100%;
+  height: auto;
+  padding: 10px 10px;
+  background-color: #525252;
+  color: #fff;
+  border: 1px solid red;
+}
+
+.movie-details-container h1 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.movie-details-form {
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  border: 1px solid blue;
+}
+
+.movie-details-form button {
+  width: 100%;
+  height: 50px;
+  background-color: #ffc700;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.evaluation-username {
+  display: flex;
+}
+
+.movie-details-evaluation {
+  padding: 15px 10px 0 10px;
+  border: 1px solid orange;
+}
+
+.movie-details-evaluation h1 {
+  font-size: 16px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.movie-details-evaluation svg {
+  margin-left: 10px;
+}
+
+.evaluation {
+  color: #9e9e9e;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  letter-spacing: -1.5%;
+  text-align: justify;
+  line-height: 20px;
+}
+
+@media (min-width: 576px) {
+  .movie-details-container {
+    padding: 40px 50px;
+  }
+
+  .form-itens {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .movie-details-form button {
+    width: 330px;
+  }
+}
