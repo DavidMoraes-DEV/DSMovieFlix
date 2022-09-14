@@ -2,12 +2,11 @@
 
 * {
   font-family: 'Open Sans';
-  margin: 0;
-  box-sizing: border-box
+  margin: 0; 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 0;
 }
 
@@ -26,11 +25,12 @@ a, a:hover {
   border-radius: 5px;
   font-size: 16px;
   letter-spacing: -0.015em;
-  color: #263238;
   border: none;
   height: 40px;
   margin-bottom: 20px;
   width: 100%;
+  color: #263238;
+  background-color: #FEFEFE;
 }
 
 .base-input::placeholder {
