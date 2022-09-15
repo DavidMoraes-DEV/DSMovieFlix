@@ -1,11 +1,9 @@
 import './styles.css';
 import { Review } from 'types/Review';
-import axios, { AxiosRequestConfig } from 'axios';
+import { AxiosRequestConfig } from 'axios';
 import { BASE_URL, requestBackend } from 'util/requests';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { SpringPage } from 'types/vendor/spring';
-import { AxiosParams } from 'types/vendor/axios';
 import ReviewForm from 'components/ReviewForm';
 import ReviewListing from 'components/ReviewListing';
 
@@ -32,6 +30,7 @@ const MovieDetails = () => {
       setReviews(response.data);
       console.log(reviews)
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movieId]);
 
   return (

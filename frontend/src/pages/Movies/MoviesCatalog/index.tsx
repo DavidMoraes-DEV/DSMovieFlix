@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-const Movies = () => {
+const MoviesCatalog = () => {
   return (
     <div className="movies-container">
       <h1>Tela listagem de filmes</h1>
@@ -15,4 +15,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default MoviesCatalog;

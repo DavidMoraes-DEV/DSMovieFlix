@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
-import { getAuthData, requestBackendLogin, saveAuthData } from 'util/requests';
+import { requestBackendLogin } from 'util/requests';
+import { getAuthData, saveAuthData } from 'util/storage';
 import './styles.css';
 
 type FormData = {
