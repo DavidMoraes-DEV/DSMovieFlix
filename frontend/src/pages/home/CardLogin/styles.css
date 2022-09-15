@@ -37,6 +37,15 @@
   font-size: 20px;
 }
 
+.invalid-feedback {
+  color: #fff;
+  font-size: 15px;
+}
+
+.form-control, .form-control:hover, .form-control:focus {
+  background-color: #fff;
+}
+
 @media (min-width: 576px) {
   .login-container {
     width: 479px;

@@ -1,0 +1,19 @@
+.movie-details-container {
+  width: 100%;
+  height: auto;
+  padding: 10px 10px;
+  color: #fff;
+  border: 1px solid red;
+}
+
+.movie-details-container h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  .movie-details-container {
+    padding: 40px 50px;
+  }
+}

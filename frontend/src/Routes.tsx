@@ -1,9 +1,8 @@
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Home from "./pages/home"
-import Movies from "pages/Movies";
-import MovieDetails from "pages/MovieDetails/MovieDetails";
-
+import Movies from "pages/Movies/MoviesCatalog";
+import MovieDetails from "pages/Movies/MovieDetails/MovieDetails";
 
 const Routes = () => (
     <BrowserRouter>
