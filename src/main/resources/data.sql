@@ -35,7 +35,7 @@ INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Que Filme legal!!!', 2,
 INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Muito Bom, Recomendo!', 3, 4);
 INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme Interessante!', 3, 5);
 INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme legal!', 4, 2);
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Não, Gostei muito do final!', 4, 5);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Não Gostei muito do final!', 4, 5);
 INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Recomendo!', 5, 4);
 INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Gostei, história muito bem elaborada.', 5, 2);
 INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Gostei!', 6, 4);
