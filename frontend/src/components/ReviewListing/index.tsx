@@ -13,7 +13,7 @@ const ReviewListing = ({ reviews }: Props) => {
         <div key={reviews.id}>
           <div className="review-username">
             <MainImage />
-            <h1>{reviews.user.email}</h1>
+            <h1>{reviews.user.name}</h1>
           </div>
           <div className="review">{reviews.text}</div>
         </div>

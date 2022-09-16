@@ -40,9 +40,7 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
     .then(response => {
       setValue('text', '');
       onInsertReview(response.data);
-      console.log("Sucesso ao Salvar", response);
-    }).catch(error => {
-      console.log("Erro ao salvar", error);
+      
     })
   };
 

@@ -2,16 +2,37 @@
     width: 100%;
     height: calc(100vh - 68px);
     padding: 15px 20px;
+    margin: 0;
     background-color: #525252;
     color: #fff;
 }
 
-.movies-container h1 {
-    font-size: 24px;
-    margin-bottom: 50px;
+.movies-container h3 {
+    padding: 0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #6C6C6C;
 }
 
 .movies-container p {
     font-size: 18px;
     margin-bottom: 15px;
+}
+
+.genre-container {
+    padding: 0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 0.2em solid #6C6C6C;
+}
+
+.genre-container h5 {
+    height: 40px;
+    padding: 5px 0 0 10px;
+    margin-bottom: 15px;
+    background-color: #6C6C6C;
+    border-radius: 5px 5px 0 0;
 }

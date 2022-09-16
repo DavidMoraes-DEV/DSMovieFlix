@@ -26,7 +26,6 @@ const CardLogin = () => {
     requestBackendLogin(formData)
       .then((response) => {
         saveAuthData(response.data);
-        const token = getAuthData().access_token;
         setHasError(false);
         history.push('/movies')
       })
