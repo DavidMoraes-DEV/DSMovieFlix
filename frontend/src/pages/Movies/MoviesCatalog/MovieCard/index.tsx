@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Movie } from 'types/Movie';
 import { SpringPage } from 'types/vendor/spring';
-import { BASE_URL, requestBackend } from 'util/requests';
+import { requestBackend } from 'util/requests';
 import './styles.css';
 
 type Props = {
@@ -26,6 +26,7 @@ const MovieCard = ({ genreId }: Props) => {
     requestBackend(params).then((response) => {
       setMovieGenre(response.data);
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

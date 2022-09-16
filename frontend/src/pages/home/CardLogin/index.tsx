@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { AuthContext } from 'AuthContext';
+import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
+import { getTokenData } from 'util/auth';
 import { requestBackendLogin } from 'util/requests';
-import { getAuthData, saveAuthData } from 'util/storage';
+import { saveAuthData } from 'util/storage';
 import './styles.css';
 
 type FormData = {
@@ -13,6 +15,7 @@ type FormData = {
 const CardLogin = () => {
 
   const history = useHistory();
+  const { setAuthContextData } = useContext(AuthContext);
 
   const [hasError, setHasError] = useState(false);
 
@@ -27,7 +30,11 @@ const CardLogin = () => {
       .then((response) => {
         saveAuthData(response.data);
         setHasError(false);
-        history.push('/movies')
+        setAuthContextData({
+          authenticated: true,
+          tokenData: getTokenData()
+        });
+        history.push('/movies');
       })
       .catch((error) => {
         setHasError(true);

@@ -52,9 +52,22 @@ const MovieDetails = () => {
 
   return (
     <div className="movie-details-container bg-secundary">
-      <h1>
-        Avaliações do filme: <br /> {movie?.title} - id: {movie?.id}
-      </h1>
+      <div className="base-card movie-details-item">
+        <div className="movie-details-image">
+          <img src={movie?.imgUrl} alt={movie?.title} className="movie-image" />
+        </div>
+        <div className="movie-details-info">
+          <h1>{movie?.title}</h1>
+          <h3>{movie?.subTitle}</h3>
+          <h6>Ano de Lançamento: {movie?.year}</h6>
+          <div className="movie-details-synopsis-card">
+            <h6>Sinópse</h6>
+          </div>
+          <div className="movie-details-synopsis">
+            <p>{movie?.synopsis}</p>
+          </div>
+        </div>
+      </div>
 
       {hasAnyRoles(['ROLE_MEMBER']) && (
         <ReviewForm movieId={movieId} onInsertReview={handleInsertReview} />
