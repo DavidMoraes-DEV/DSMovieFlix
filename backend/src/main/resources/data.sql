@@ -1,11 +1,17 @@
 INSERT INTO tb_user (name, email, password) VALUES ('Bob', 'bob@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
 INSERT INTO tb_user (name, email, password) VALUES ('Ana', 'ana@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('Alex', 'alex@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('David', 'david@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (name, email, password) VALUES ('Carla', 'carla@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
 
 INSERT INTO tb_role (authority) VALUES ('ROLE_VISITOR');
 INSERT INTO tb_role (authority) VALUES ('ROLE_MEMBER');
 
 INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (4, 2);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (5, 2);
 
 INSERT INTO tb_genre (name) VALUES ('Comédia');
 INSERT INTO tb_genre (name) VALUES ('Terror');
@@ -22,6 +28,25 @@ INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUE
 INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('Uma Noite de Crime', 'Anarquia', 2014, 'https://image.tmdb.org/t/p/w500_and_h282_face/ecD9hT8odHzFCDeGDy4N2IKh0LN.jpg', 'O governo dos Estados Unidos sanciona uma lei em que os assassinatos são permitidos durante uma noite, para que os cidadãos liberem seus instintos violentos. Cinco desconhecidos se unem para tentar sobreviver a essa verdadeira noite de terror.', 2);
 INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('O Segredo da Cabana', null, 2012, 'https://image.tmdb.org/t/p/w533_and_h300_bestv2/5iiVfPS6LsAqmVQVOzhyCHhCFgU.jpg', 'Cinco amigos fazem uma pausa em uma cabana remota, onde conseguem mais do que esperavam, descobrindo a verdade atrás da cabana na floresta.', 2);
 
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Meh, filme OK', 1, 1);
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Gostei e recomendo!', 1, 1);
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Que Filme!!!', 2, 1);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Meh, filme OK', 1, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Gostei e recomendo!', 1, 4);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Que Filme!!!', 2, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Que Filme legal!!!', 2, 5);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Muito Bom, Recomendo!', 3, 4);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme Interessante!', 3, 5);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme legal!', 4, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Não, Gostei muito do final!', 4, 5);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Recomendo!', 5, 4);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Gostei, história muito bem elaborada.', 5, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Gostei!', 6, 4);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Muito bom!', 6, 5);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme Interessante', 7, 4);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Gostei muito, vou assistir novamente!', 7, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Muito bom o desenrolar da história.', 8, 4);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Perfeito!', 8, 5);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Super Recomendo!', 9, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Muito legal!', 9, 5);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Que filme legal!', 10, 4);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Final muito interessante!', 10, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme Top...', 10, 5);
+
