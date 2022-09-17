@@ -49,7 +49,7 @@ const ReviewForm = ({ movieId, onInsertReview }: Props) => {
             required: '* Campo Obrigatório',
           })}
           type="text"
-          className="base-input"
+          className="form-control base-input"
           placeholder="Deixe sua avaliação aqui"
         />
         <button type="submit">SALVAR AVALIAÇÃO</button>

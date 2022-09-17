@@ -33,3 +33,9 @@
         padding: 15px 20px 10px 20px;
     }
 }
+
+@media (min-width: 1200px) {
+  .movie-details-review {
+    padding: 25px 30px 20px 30px;
+  }
+}

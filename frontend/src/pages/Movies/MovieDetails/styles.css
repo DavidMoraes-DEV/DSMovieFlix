@@ -11,6 +11,32 @@
   margin-bottom: 15px;
 }
 
+.goback-container {
+  width: 100px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.goback-container-link {
+  display: flex;
+  align-items: center;
+}
+
+.goback-container h2 {
+  margin-top: 6px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #C1C1C1;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+.goback-container svg {
+  height: 15px;
+  color: #C1C1C1;
+  transform: rotate(-180deg);
+}
+
 .movie-details-item {
   display: flex;
   flex-direction: column;
@@ -80,7 +106,7 @@
 
 @media (min-width: 576px) {
   .movie-details-container {
-    padding: 40px 50px;
+    padding: 20px 50px 40px 50px;
   }
 
   .movie-details-item {
@@ -163,8 +189,12 @@
     width: 700px;
   }
 
+  .movie-details-item {
+    padding: 30px;
+  }
+
   .movie-details-info {
-    padding: 30px 10px 30px 30px;
+    padding: 30px 0 30px 30px;
   }
 
   .movie-details-info h1 {

@@ -1,9 +1,10 @@
 import './styles.css';
+import { ReactComponent as ArrowIcon } from 'assets/images/arrow.svg';
 import { Review } from 'types/Review';
 import { AxiosRequestConfig } from 'axios';
 import { BASE_URL, requestBackend } from 'util/requests';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ReviewForm from 'components/ReviewForm';
 import ReviewListing from 'components/ReviewListing';
 import { hasAnyRoles } from 'util/auth';
@@ -52,6 +53,12 @@ const MovieDetails = () => {
 
   return (
     <div className="movie-details-container bg-secundary">
+      <div className="goback-container">
+        <Link to={'/movies'} className="goback-container-link">
+          <ArrowIcon />
+          <h2>VOLTAR</h2>
+        </Link>
+      </div>
       <div className="base-card movie-details-item">
         <div className="movie-details-image">
           <img src={movie?.imgUrl} alt={movie?.title} className="movie-image" />

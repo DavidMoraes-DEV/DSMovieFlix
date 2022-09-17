@@ -17,6 +17,10 @@
   margin-bottom: 10px;
 }
 
+.form-control, .form-control:focus .form-control:hover {
+  border-color: #C1C1C1;
+}
+
 @media (min-width: 576px) {
   .form-itens {
     display: flex;
@@ -31,5 +35,11 @@
 
   .movie-details-form button {
     width: 330px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-details-form {
+    padding: 30px;
   }
 }
