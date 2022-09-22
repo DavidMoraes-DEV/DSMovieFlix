@@ -1,38 +1,108 @@
 .movies-container {
-    width: 100%;
-    height: 100%;
-    padding: 20px 20px 5px 20px;
-    margin: 0;
-    background-color: #525252;
-    color: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px;
+  margin: 0;
+  background-color: #525252;
+  color: #fff;
 }
 
 .movies-container h3 {
-    padding: 0;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    border-bottom: 3px solid #6C6C6C;
+  padding: 0;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 3px solid #6c6c6c;
 }
 
 .movies-container p {
-    font-size: 18px;
-    margin-bottom: 15px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.movies-filter-container {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.movies-filter-content {
+  height: 100%;
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+.movies-filter-select__control {
+  max-width: 300px;
+  background-color: none !important;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+.movies-filter-select__indicator-separator {
+    display: none;
 }
 
 .genre-container {
-    padding: 0;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 0.2em solid #6C6C6C;
+  padding: 0;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 0.2em solid #6c6c6c;
 }
 
 .genre-container h5 {
-    height: 40px;
-    padding: 5px 0 0 19px;
-    margin-bottom: 15px;
-    background-color: #6C6C6C;
-    border-radius: 5px 5px 0 0;
+  height: 40px;
+  padding: 5px 0 0 19px;
+  margin-bottom: 15px;
+  background-color: #6c6c6c;
+  border-radius: 5px 5px 0 0;
+}
+
+.movies-pagination-container {
+    margin-top: 15px;
+}
+
+@media (min-width: 576px) {
+  .movies-container {
+    padding: 10px;
+  }
+
+  .movies-filter-container {
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .movies-container {
+    padding: 20px;
+  }
+
+  .movies-filter-container {
+    padding: 10px 15px 10px 15px;
+  }
+
+  .movies-pagination-container {
+      margin-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movies-container {
+    padding: 25px;
+  }
+
+  .movies-filter-container {
+    padding: 10px 10px;
+  }
+
+  .movies-filter-content {
+    padding: 15px 20px;
+  }
+
+  .movies-pagination-container {
+    margin-top: 25px;
+}
 }

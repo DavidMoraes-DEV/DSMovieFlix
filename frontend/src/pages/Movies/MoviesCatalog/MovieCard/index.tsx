@@ -32,7 +32,7 @@ const MovieCard = ({ genreId }: Props) => {
   return (
     <div className="row moviecard-container">
       {movieGenre?.content.map((movie) => (
-        <div className="col-sm-6 col-md-4 col-xl-3 moviecard-container-content" key={movie.id}>
+        <div className="col-sm-6 col-xl-3 moviecard-container-content" key={movie.id}>
           <div className="base-card moviecard-item">
             <Link to={`/movies/${movie.id}`}>
               <div className="moviecard-content-image">
@@ -44,6 +44,8 @@ const MovieCard = ({ genreId }: Props) => {
               </div>
               <div className="moviecard-title">
                 <h1>{movie.title}</h1>
+                <h2>{movie.year}</h2>
+                <p>{movie.subTitle}</p>
               </div>
             </Link>
           </div>

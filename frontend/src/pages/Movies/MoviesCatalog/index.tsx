@@ -1,5 +1,7 @@
 import { AxiosRequestConfig } from 'axios';
+import Pagination from 'components/Pagination';
 import { useEffect, useState } from 'react';
+import Select from 'react-select';
 import { Genre } from 'types/Genre';
 import { requestBackend } from 'util/requests';
 import MovieCard from './MovieCard';
@@ -22,13 +24,18 @@ const MoviesCatalog = () => {
 
   return (
     <div className="row movies-container">
-      <h3>CATEGORIAS</h3>
-      {genre?.map((genre) => (
-        <div className="genre-container" key={genre.id}>
-          <h5>{genre.name}</h5>
-          <MovieCard genreId={genre.id} />
+      <div className="movies-filter-container">
+        <div className="base-card movies-filter-content">
+          <Select options={genre} classNamePrefix="movies-filter-select"
+          />
         </div>
+      </div>
+      {genre?.map((genre) => (
+        <MovieCard genreId={genre.id} />
       ))}
+      <div className='movies-pagination-container'>
+        <Pagination pageCount={genre ? genre.length : 0} range={3}/>
+      </div>
     </div>
   );
 };
