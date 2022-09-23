@@ -21,27 +21,11 @@
   margin-bottom: 15px;
 }
 
-.movies-filter-container {
+.moviecard-container {
+  width: 100%;
   padding: 0;
-  margin-bottom: 10px;
-}
-
-.movies-filter-content {
-  height: 100%;
-  padding: 5px 20px;
-  border-radius: 4px;
-  margin: 0 5px;
-}
-
-.movies-filter-select__control {
-  max-width: 300px;
-  background-color: none !important;
-  border: 1px solid #e1e1e1;
-  border-radius: 4px;
-}
-
-.movies-filter-select__indicator-separator {
-    display: none;
+  display: flex;
+  margin: 0;
 }
 
 .genre-container {
@@ -61,17 +45,12 @@
 }
 
 .movies-pagination-container {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 @media (min-width: 576px) {
   .movies-container {
     padding: 10px;
-  }
-
-  .movies-filter-container {
-    margin-top: 10px;
-    padding: 0 10px;
   }
 }
 
@@ -80,12 +59,8 @@
     padding: 20px;
   }
 
-  .movies-filter-container {
-    padding: 10px 15px 10px 15px;
-  }
-
   .movies-pagination-container {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 }
 
@@ -94,15 +69,7 @@
     padding: 25px;
   }
 
-  .movies-filter-container {
-    padding: 10px 10px;
-  }
-
-  .movies-filter-content {
-    padding: 15px 20px;
-  }
-
   .movies-pagination-container {
     margin-top: 25px;
-}
+  }
 }

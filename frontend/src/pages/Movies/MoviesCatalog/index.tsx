@@ -1,40 +1,67 @@
 import { AxiosRequestConfig } from 'axios';
+import MovieFilter, { MovieGenreFilter } from 'components/MovieFilter';
 import Pagination from 'components/Pagination';
-import { useEffect, useState } from 'react';
-import Select from 'react-select';
-import { Genre } from 'types/Genre';
+import { useCallback, useEffect, useState } from 'react';
+import { Movie } from 'types/Movie';
+import { SpringPage } from 'types/vendor/spring';
 import { requestBackend } from 'util/requests';
 import MovieCard from './MovieCard';
 import './styles.css';
 
-const MoviesCatalog = () => {
-  const [genre, setGenre] = useState<Genre[]>([]);
+type ControlComponentsData = {
+  activePage: number;
+  filterData: MovieGenreFilter;
+};
 
-  useEffect(() => {
-    const params: AxiosRequestConfig = {
+const MoviesCatalog = () => {
+  const [pageMovies, setPageMovies] = useState<SpringPage<Movie>>();
+
+  const [controlComponentsData, setControlComponentsData] =
+    useState<ControlComponentsData>({
+      activePage: 0,
+      filterData: { name: '', genre: null },
+    });
+
+  const handlePageChange = (pageNumber: number) => {
+    setControlComponentsData({ activePage: pageNumber, filterData: controlComponentsData.filterData });
+  };
+
+  const handleSubmitFilter = (data: MovieGenreFilter) => {
+    setControlComponentsData({ activePage: 0, filterData: data });
+  };
+
+  const getMovies = useCallback(() => {
+    const config: AxiosRequestConfig = {
       method: 'GET',
-      url: '/genres',
+      url: '/movies',
       withCredentials: true,
+      params: {
+        page: controlComponentsData.activePage,
+        size: 4,
+        genreId: controlComponentsData.filterData.genre?.id,
+      },
     };
 
-    requestBackend(params).then((response) => {
-      setGenre(response.data);
+    requestBackend(config).then((response) => {
+      setPageMovies(response.data);
     });
-  }, []);
+  }, [controlComponentsData]);
+
+  useEffect(() => {
+    getMovies();
+  }, [getMovies]);
 
   return (
     <div className="row movies-container">
-      <div className="movies-filter-container">
-        <div className="base-card movies-filter-content">
-          <Select options={genre} classNamePrefix="movies-filter-select"
-          />
-        </div>
+      <MovieFilter onSubmitFilter={handleSubmitFilter}/>
+
+      <div className="row moviecard-container">
+        {pageMovies?.content.map((movie) => (
+          <MovieCard movie={movie} key={movie.id} />
+        ))}
       </div>
-      {genre?.map((genre) => (
-        <MovieCard genreId={genre.id} />
-      ))}
-      <div className='movies-pagination-container'>
-        <Pagination pageCount={genre ? genre.length : 0} range={3}/>
+      <div className="movies-pagination-container">
+        <Pagination pageCount={pageMovies ? pageMovies.totalPages : 0} range={3} onChange={handlePageChange} />
       </div>
     </div>
   );
