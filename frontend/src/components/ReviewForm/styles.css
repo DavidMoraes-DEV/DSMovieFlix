@@ -38,8 +38,15 @@
   }
 }
 
+@media (min-width: 768px) {
+  .movie-details-form {
+    margin-bottom: 40px;
+  }
+}
+
 @media (min-width: 1200px) {
   .movie-details-form {
+    width: 1100px;
     padding: 30px;
   }
 }
