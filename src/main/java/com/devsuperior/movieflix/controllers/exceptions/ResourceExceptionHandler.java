@@ -71,7 +71,7 @@ public class ResourceExceptionHandler {
 	@ExceptionHandler(ForbiddenException.class) 
 	public ResponseEntity<OAuthCustomError> forbidden(ForbiddenException e, HttpServletRequest request) {
 		
-		HttpStatus status = HttpStatus.FORBIDDEN; //Cod. 403
+		HttpStatus status = HttpStatus.FORBIDDEN;
 		OAuthCustomError err = new OAuthCustomError("Forbidden", e.getMessage());
 		
 		return ResponseEntity.status(status).body(err);
@@ -80,7 +80,7 @@ public class ResourceExceptionHandler {
 	@ExceptionHandler(UnauthorizedException.class) 
 	public ResponseEntity<OAuthCustomError> unauthorized(UnauthorizedException e, HttpServletRequest request) {
 		
-		HttpStatus status = HttpStatus.UNAUTHORIZED; //Cod. 401
+		HttpStatus status = HttpStatus.UNAUTHORIZED;
 		OAuthCustomError err = new OAuthCustomError();
 		
 		return ResponseEntity.status(status).body(err);

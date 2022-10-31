@@ -6,7 +6,6 @@ public class OAuthCustomError {
 
 	private String error;
 	
-	//Define a saída para o banco de dados no formato Snake-Cash "error-description"
 	@JsonProperty("error-description")
 	private String errorDescription;
 	
