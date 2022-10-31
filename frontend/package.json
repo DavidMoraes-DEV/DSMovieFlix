@@ -18,7 +18,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
     "jwt-decode": "^3.1.2",
-    "node-sass": "4.14.1",
+    "node-sass": "^7.0.3",
     "qs": "^6.11.0",
     "react": "17.0.2",
     "react-currency-input-field": "^3.6.5",
