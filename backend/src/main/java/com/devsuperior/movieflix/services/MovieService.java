@@ -1,5 +1,7 @@
 package com.devsuperior.movieflix.services;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,10 +37,10 @@ public class MovieService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Page<MovieMinDTO> findByGenre(Long genreId, Pageable pageable) {
+	public Page<MovieMinDTO> findByGenre(Long genreId, String title, Pageable pageable) {
 		
-		Genre genre = (genreId == 0) ? null : genreRepository.getOne(genreId);
-		Page<Movie> page = repository.findAllMovieGenre(genre, pageable);
+		List<Genre> genres = (genreId == 0) ? null : Arrays.asList(genreRepository.getOne(genreId));
+		Page<Movie> page = repository.findAllMovieGenre(genres, title, pageable);
 		
 		repository.findMovieWithGenres(page.getContent()); 
 		

@@ -35,9 +35,12 @@ public class MovieController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<Page<MovieMinDTO>> findByGenre(@RequestParam(value = "genreId", defaultValue = "0") Long genreId, Pageable pageable) {
-		Page<MovieMinDTO> list = service.findByGenre(genreId, pageable);
-		return ResponseEntity.ok().body(list);
+	public ResponseEntity<Page<MovieMinDTO>> findByGenre(Pageable pageable,
+			@RequestParam(value = "genreId", defaultValue = "0") Long genreId,
+			@RequestParam(value = "name", defaultValue = "") String title) {
+		
+		Page<MovieMinDTO> page = service.findByGenre(genreId, title.trim(), pageable);
+		return ResponseEntity.ok().body(page);
 	}
 	
 	@GetMapping(value = "/{movieId}/reviews")
